@@ -3,16 +3,21 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
-	
-	int i;
-	int temp=1;
+int inc(int counter); 
 
-	for(i=0;i<5;i++)
-	{
-		printf("temp+%d\n", temp);
-		temp++; // temp가 5번 반복 (찍힘) 
-	}
-	
+int main(int argc, char *argv[])
+{
+	int i=10;
+	 
+	printf("함수 호출전 i=%d\n", i);
+	i=inc(i);
+	printf("함수 호출후 i=%d\n", i);
+		
 	return 0;
+}
+
+int inc(int counter)
+{
+	counter++;
+	return counter;
 }
