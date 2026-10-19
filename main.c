@@ -2,16 +2,15 @@
 
 int main(int argc, char *argv[]) 
 {
-    int flag = 1;
-    int y;
+    int i;
 
-    while(flag != 0)
+    for(i=0;i<5;i++)
     {
-        y = 3;
-        flag = 0;
-    }
+        static int temp = 1;
 
-    y = 4;
+        printf("temp = %d\n", temp);
+        temp++;
+    }
 
     return 0; 
 }
